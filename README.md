@@ -9,36 +9,34 @@ you can use any other item as long as you create the following screens. You will
 4. Shoe Listing screen
 5. Shoe Detail screen for adding a new shoe
 
-## Getting Started
+## Steps
 
-##Steps
+1. [x] Open the starter project in the latest stable version of Android Studio.
 
-1. [v] Open the starter project in the latest stable version of Android Studio.
+2. [x] Add the navigation libraries to the app build.gradle file
 
-2. [v] Add the navigation libraries to the app build.gradle file
+3. [x] Add the safe-arg plugin to the main and app build.gradle file
 
-3. [v] Add the safe-arg plugin to the main and app build.gradle file
-
-4. [v] Create a new navigation xml file
+4. [x] Create a new navigation xml file
 
 5. Create a new Login destination.
 
-   - [v] Include email and password labels
-   - [v] Include email and password fields
-   - [v]  Create buttons for creating a new login and logging in with an existing account
-   - [v] Clicking either button should navigate to the Welcome Screen.
+   - [x] Include email and password labels
+   - [x] Include email and password fields
+   - [x]  Create buttons for creating a new login and logging in with an existing account
+   - [x] Clicking either button should navigate to the Welcome Screen.
 
 6. Create a new Welcome screen destination that includes:
 
-   * [v] A new layout
-   * [v] At least 2 textviews
-   * [v] A navigation button with actions to navigate to the instructions screen
+   * [x] A new layout
+   * [x] At least 2 textviews
+   * [x] A navigation button with actions to navigate to the instructions screen
 
 7. Create a new Instruction destination that includes:
 
-   * [v] A new layout
-   * [v] At least 2 textviews
-   * [v] A navigation button with actions to navigate to the shoe list screen
+   * [x] A new layout
+   * [x] At least 2 textviews
+   * [x] A navigation button with actions to navigate to the shoe list screen
 
 8. Create a class that extends ViewModel
 
@@ -46,10 +44,10 @@ you can use any other item as long as you create the following screens. You will
 
 9. Create a new Shoe List destination that includes:
 
-   * [v] A new layout
-   * [v] A ScrollView
-   * [v] A LinearLayout for Shoe Items
-   * A FloatingActionButton with an action to navigate to the shoe detail screen
+   * [x] A new layout
+   * [x] A ScrollView
+   * [x] A LinearLayout for Shoe Items
+   * [x] A FloatingActionButton with an action to navigate to the shoe detail screen
 
 10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
 
