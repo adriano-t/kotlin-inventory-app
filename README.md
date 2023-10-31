@@ -23,23 +23,22 @@ you can use any other item as long as you create the following screens. You will
 
 5. Create a new Login destination.
 
-   * Include email and password labels 
-
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.
+   - [v] Include email and password labels
+   - [v] Include email and password fields
+   - [v]  Create buttons for creating a new login and logging in with an existing account
+   - [v] Clicking either button should navigate to the Welcome Screen.
 
 6. Create a new Welcome screen destination that includes:
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
+   * [v] A new layout
+   * [v] At least 2 textviews
+   * [v] A navigation button with actions to navigate to the instructions screen
 
 7. Create a new Instruction destination that includes:
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
+   * [v] A new layout
+   * [v] At least 2 textviews
+   * [v] A navigation button with actions to navigate to the shoe list screen
 
 8. Create a class that extends ViewModel
 
@@ -47,9 +46,9 @@ you can use any other item as long as you create the following screens. You will
 
 9. Create a new Shoe List destination that includes:
 
-   * A new layout
-   * A ScrollView
-   * A LinearLayout for Shoe Items
+   * [v] A new layout
+   * [v] A ScrollView
+   * [v] A LinearLayout for Shoe Items
    * A FloatingActionButton with an action to navigate to the shoe detail screen
 
 10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
