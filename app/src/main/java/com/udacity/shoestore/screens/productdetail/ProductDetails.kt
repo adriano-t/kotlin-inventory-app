@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.ProductsListFragmentBinding
+import com.udacity.shoestore.databinding.ProductDetailFragmentBinding
 
 class ProductDetails: Fragment(){
-    private lateinit var binding: ProductsListFragmentBinding
+    private lateinit var binding: ProductDetailFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
