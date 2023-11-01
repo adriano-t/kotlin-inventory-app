@@ -2,13 +2,19 @@ package com.udacity.shoestore.screens.productslist
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ProductsListFragmentBinding
+import timber.log.Timber
 
 class ProductsList: Fragment() {
 
@@ -26,12 +32,30 @@ class ProductsList: Fragment() {
             container,
             false
         )
+
         binding.buttonAdd.setOnClickListener(
             Navigation.createNavigateOnClickListener(
                 ProductsListDirections.actionProductsListToProductDetails()
             )
         )
 
+        setHasOptionsMenu(true)
+
+        // disable the back button
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {}
+
         return binding.root
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.logout_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().navigate(R.id.action_productsList_to_loginFragment)
+        return super.onOptionsItemSelected(item)
+    }
+
+
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -32,6 +33,11 @@ class InstructionsFragment: Fragment() {
                 InstructionsFragmentDirections.actionInstructionsFragmentToProductsList()
             )
         )
+
+        // disable the back button
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {}
+
         return binding.root
     }
+
 }

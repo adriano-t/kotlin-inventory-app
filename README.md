@@ -49,11 +49,11 @@ you can use any other item as long as you create the following screens. You will
    * [x] A LinearLayout for Shoe Items
    * [x] A FloatingActionButton with an action to navigate to the shoe detail screen
 
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
+10. [x] In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
 
 11. Create a new Shoe Detail destination that includes:
 
-    * A new layout
+    * [x] A new layout
     * A TextView label and EditView for the
       * Shoe Name
       * Company
@@ -62,7 +62,7 @@ you can use any other item as long as you create the following screens. You will
     * A Cancel button with an action to navigate back to the shoe list screen
     * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
 
-12. Make sure you can’t go back to onboarding screens
+12. [x] Make sure you can’t go back to onboarding screens
 
 13. In the Shoe List screen:
 
