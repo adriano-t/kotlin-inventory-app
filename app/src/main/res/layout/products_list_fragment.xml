@@ -10,13 +10,15 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <LinearLayout
                 android:id="@+id/productsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingBottom="32dp">
 
             </LinearLayout>
         </ScrollView>
@@ -32,4 +34,9 @@
             android:src="@drawable/ic_add" />
     </FrameLayout>
 
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="com.udacity.shoestore.MainViewModel" />-->
+<!--    </data>-->
 </layout>

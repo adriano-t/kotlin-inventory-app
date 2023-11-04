@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
-class ShareViewModel : ViewModel() {
+class MainViewModel : ViewModel() {
 
     private var currentProduct = Shoe(
         "",
@@ -16,9 +16,14 @@ class ShareViewModel : ViewModel() {
         "",
     )
 
-    private var _shoesList = MutableLiveData<MutableList<Shoe>>(mutableListOf())
-    val shoesList: LiveData<MutableList<Shoe>>
-        get() = _shoesList
+    private var _productsList = MutableLiveData<MutableList<Shoe>>(mutableListOf(
+        Shoe("Air Max", 40, "Nike", "Cool shoes", "image_1"),
+        Shoe("Super", 42, "Adidas", "Very very cool shoes", "image_2"),
+        Shoe("Air Max", 40, "Nike", "Cool shoes", "image_1"),
+        Shoe("Super", 42, "Adidas", "Very very cool shoes", "image_2"),
+    ))
+    val productsList: LiveData<MutableList<Shoe>>
+        get() = _productsList
 
 
     fun setProductSize(view: View, size: Int) {
@@ -31,7 +36,7 @@ class ShareViewModel : ViewModel() {
 
     private fun saveNewProduct() {
         val newShoe = currentProduct.copy()
-        _shoesList.value?.add(newShoe)
+        _productsList.value?.add(newShoe)
     }
 
     fun clearProductDetails() {
