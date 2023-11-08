@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/instructions"
+            android:textSize="@dimen/title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,7 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
             android:text="@string/instructionsDetails"
+            android:textSize="@dimen/description"
             app:layout_constraintBottom_toTopOf="@+id/buttonProductsList"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
