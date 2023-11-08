@@ -2,18 +2,157 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screens.productdetail.ProductDetail">
+    tools:context=".screens.productdetail.ProductDetail"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/labelProductDetailName"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Product Details"
-            tools:layout_editor_absoluteX="157dp"
-            tools:layout_editor_absoluteY="50dp" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Name"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelProductDetailCompany"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/labelProductDetailCompany"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Company"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelProductDetailSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelProductDetailName"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/labelProductDetailSize"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Size"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/labelProductDetailDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelProductDetailCompany"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/labelProductDetailDescription"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Description"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelProductDetailSize"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/productDetailsInputName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={mainViewModel.shoeName}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelProductDetailName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelProductDetailName" />
+
+        <EditText
+            android:id="@+id/productDetailsInputCompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={mainViewModel.shoeCompany}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelProductDetailCompany"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelProductDetailCompany" />
+
+        <EditText
+            android:id="@+id/productDetailsInputSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@={`` + mainViewModel.shoeSize}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelProductDetailSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelProductDetailSize" />
+
+        <EditText
+            android:id="@+id/productDetailsInputDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_border"
+            android:ems="10"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="@={mainViewModel.shoeDescription}"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/buttonProductSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelProductDetailDescription"
+            app:layout_constraintTop_toBottomOf="@+id/labelProductDetailDescription" />
+
+        <Button
+            android:id="@+id/buttonProductSave"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonProductCancel" />
+
+        <Button
+            android:id="@+id/buttonProductCancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonProductSave"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.udacity.shoestore.MainViewModel" />
+
+    </data>
+
 </layout>
