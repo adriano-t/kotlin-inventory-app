@@ -2,7 +2,8 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <!-- i used a FrameLayout to put a roundrect background and a constraintlayout to build
+     the card content because it simplifies the xml hierarchy and it's easier to implement -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"

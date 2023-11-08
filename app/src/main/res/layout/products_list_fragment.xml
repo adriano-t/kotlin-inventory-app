@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.productslist.ProductsList">
 
+    <!-- I used framelayout to stack the floatingActionButton on top
+        then a linear layout inside a scrollview because there is a simple list of items
+    -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

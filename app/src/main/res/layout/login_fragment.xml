@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context=".screens.login.LoginFragment">
-<!--    <data>-->
-<!--        <variable-->
-<!--            name="loginViewModel"-->
-<!--            type="com.udacity.shoestore..." />-->
-<!--    </data>-->
+    <!-- I used constraint layout to build a simple page avoiding the use of nested layouts -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"
