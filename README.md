@@ -3,11 +3,11 @@
 This project will consist of five screens. You don't have to create a shoe store, 
 you can use any other item as long as you create the following screens. You will be creating:
 
-1. Login screen: Email and password fields and labels plus create and login buttons
-2. Welcome onboarding screen
-3. Instructions onboarding screen
-4. Shoe Listing screen
-5. Shoe Detail screen for adding a new shoe
+1. [x] Login screen: Email and password fields and labels plus create and login buttons
+2. [x] Welcome onboarding screen
+3. [x] Instructions onboarding screen
+4. [x] Shoe Listing screen
+5. [x] Shoe Detail screen for adding a new shoe
 
 ## Steps
 
@@ -59,8 +59,8 @@ you can use any other item as long as you create the following screens. You will
       * [x] Company
       * [x] Shoe Size
       * [x] Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+    * [x] A Cancel button with an action to navigate back to the shoe list screen
+    * [x] A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
 
 12. [x] Make sure you can’t go back to onboarding screens
 
