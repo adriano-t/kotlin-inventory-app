@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="instructionsDetails">In the product list screen, view your shoe inventory.\n
+- To add a new shoe, tap the plus button.\n
+- On the new shoe screen, enter shoe details (name, brand, size, color, description) and add an image.\n
+- Save to add the shoe; Cancel to go back.\n
+- To log out tap the three dots and select "Logout."</string>
+    <string name="cta_product_list">Product list</string>
+    <string name="hint_password">password</string>
+    <string name="hint_email">name@example.com</string>
+    <string name="label_password">Password</string>
+    <string name="label_email">Email</string>
+    <string name="cta_register">Register</string>
+    <string name="cta_login">Login</string>
+    <string name="label_name">Name</string>
+    <string name="label_company">Company</string>
+    <string name="label_size">Size</string>
+    <string name="label_description">Description</string>
+    <string name="cta_save">Save</string>
+    <string name="cta_cancel">Cancel</string>
+    <string name="label_welcome">Welcome!</string>
+    <string name="welcome_details">Welcome to our Shoe Inventory Manager, the perfect companion for every shoe enthusiast!\n
+With this app, you can effortlessly organize and manage your shoe collection, ensuring you never lose track of your favorite footwear.</string>
+    <string name="cta_instructions">Instructions</string>
+    <string name="cta_logout">Logout</string>
+    <string name="title_welcome">Welcome</string>
+    <string name="title_instructions">Instructions</string>
+    <string name="title_products_list">Products List</string>
+    <string name="title_product_details">Product Details</string>
+    <string name="title_auth">Authentication</string>
 </resources>

@@ -20,7 +20,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:hint="password"
+            android:hint="@string/hint_password"
             android:inputType="text|textPassword"
             app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmailAddress"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:ems="10"
-            android:hint="name@example.com"
+            android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Password"
+            android:text="@string/label_password"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextPassword"
             app:layout_constraintEnd_toStartOf="@+id/editTextPassword" />
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Email"
+            android:text="@string/label_email"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextEmailAddress"
             app:layout_constraintEnd_toStartOf="@+id/editTextEmailAddress" />
 
@@ -64,7 +64,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:text="Register"
+            android:text="@string/cta_register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -79,7 +79,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
-            android:text="Login"
+            android:text="@string/cta_login"
             app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

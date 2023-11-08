@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.udacity.shoestore.screens.login.LoginFragment"
-        android:label="Authentication"
+        android:label="@string/title_auth"
         tools:layout="@layout/login_fragment"
         >
         <action
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
-        android:label="Welcome"
+        android:label="@string/title_welcome"
 
         tools:layout="@layout/welcome_fragment">
         <action
@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.udacity.shoestore.screens.instructions.InstructionsFragment"
-        android:label="Instructions"
+        android:label="@string/title_instructions"
         tools:layout="@layout/instructions_fragment">
         <action
             android:id="@+id/action_instructionsFragment_to_productsList"
@@ -50,7 +50,7 @@
     <fragment
         android:id="@+id/productsList"
         android:name="com.udacity.shoestore.screens.productslist.ProductsList"
-        android:label="Products List"
+        android:label="@string/title_products_list"
         tools:layout="@layout/products_list_fragment" >
         <action
             android:id="@+id/action_productsList_to_productDetails"
@@ -72,6 +72,6 @@
     <fragment
         android:id="@+id/productDetails"
         android:name="com.udacity.shoestore.screens.productdetail.ProductDetails"
-        android:label="Product Details"
+        android:label="@string/title_product_details"
         tools:layout="@layout/product_detail_fragment"/>
 </navigation>
