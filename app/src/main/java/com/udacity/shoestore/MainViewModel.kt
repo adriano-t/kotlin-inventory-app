@@ -8,11 +8,15 @@ import com.udacity.shoestore.models.Shoe
 
 class MainViewModel : ViewModel() {
 
-    var shoeName = MutableLiveData("")
-    var shoeSize = MutableLiveData<Int>(40)
-    var shoeCompany = MutableLiveData("")
-    var shoeDescription = MutableLiveData("")
-    var shoeImage = MutableLiveData("")
+    public var currentProduct = MutableLiveData(
+        Shoe(
+            "",
+            0,
+            "",
+            "",
+            "",
+        )
+    )
 
     private var _productsList = MutableLiveData<MutableList<Shoe>>(mutableListOf(
         Shoe("Air Max", 40, "Nike", "Cool shoes", "image_1"),
@@ -28,33 +32,30 @@ class MainViewModel : ViewModel() {
     }
 
     fun saveNewProduct(): Boolean {
+        if(currentProduct.value == null)
+            return false
 
+        val shoe = currentProduct.value!!
 
-        if (shoeSize.value!! <= 0 ||
-            shoeCompany.value!!.isEmpty() ||
-            shoeName.value!!.isEmpty() ||
-            shoeDescription.value!!.isEmpty()
+        if (shoe.size <= 0 ||
+            shoe.company.isEmpty() ||
+            shoe.name.isEmpty() ||
+            shoe.description.isEmpty()
         ) {
             return false;
         }
 
-        _productsList.value?.add(
-            Shoe(
-                shoeName.value!!,
-                shoeSize.value!!,
-                shoeCompany.value!!,
-                shoeDescription.value!!,
-                shoeImage.value!!
-            )
-        )
+        _productsList.value?.add(shoe.copy())
         return true
     }
 
     fun clearProductDetails() {
-        shoeName.value = ""
-        shoeSize.value = 40
-        shoeCompany.value = ""
-        shoeDescription.value = ""
-        shoeImage.value = ""
+        currentProduct.value = Shoe(
+            "",
+            0,
+            "",
+            "",
+            "",
+        )
     }
 }
