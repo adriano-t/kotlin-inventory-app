@@ -30,8 +30,8 @@ class MainViewModel : ViewModel() {
     private var _productsList = MutableLiveData<MutableList<Shoe>>(mutableListOf(
         Shoe("Air Max", 40, "Nike", "Cool shoes", 0),
         Shoe("Super", 42, "Adidas", "Very very cool shoes", 3),
-        Shoe("Air Max", 40, "Nike", "Cool shoes", 2),
-        Shoe("Super", 42, "Adidas", "Very very cool shoes", 1),
+        Shoe("Speed Z", 40, "Green", "The perfect shoes", 2),
+        Shoe("All Stars", 42, "Converse", "Very very cool shoes", 1),
     ))
     val productsList: LiveData<MutableList<Shoe>>
         get() = _productsList
