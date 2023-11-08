@@ -78,8 +78,7 @@ class ProductsList: Fragment() {
                 labelProductName.text = product.name
                 labelProductSize.text = "Size: ${product.size}"
 
-                //TODO: set image based on product.image
-                //productImage.setImageResource()
+                productImage.setImageResource(viewModel.shoeImages[product.imageIndex])
             }
         }
     }

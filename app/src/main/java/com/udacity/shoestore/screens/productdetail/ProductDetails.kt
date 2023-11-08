@@ -17,10 +17,13 @@ import com.udacity.shoestore.MainViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ProductDetailFragmentBinding
 import timber.log.Timber
+import kotlin.random.Random
 
 class ProductDetails: Fragment(){
     private lateinit var binding: ProductDetailFragmentBinding
     private lateinit var viewModel: MainViewModel
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -44,6 +47,7 @@ class ProductDetails: Fragment(){
                 viewModel.clearProductDetails()
                 findNavController().navigateUp()
                 Timber.i("Saved")
+                binding.productDetailImage.setImageResource(R.drawable.shoe_empty)
             } else {
                 Toast.makeText(context, "Fill the form to save the product", Toast.LENGTH_SHORT).show()
                 Timber.i("Not saved")
@@ -52,7 +56,25 @@ class ProductDetails: Fragment(){
 
         binding.buttonProductCancel.setOnClickListener {
             viewModel.clearProductDetails()
+            binding.productDetailImage.setImageResource(R.drawable.shoe_empty)
             findNavController().navigateUp()
+        }
+
+        viewModel.currentProduct.observe(viewLifecycleOwner) {
+            if(it.imageIndex == -1) {
+                binding.productDetailImage.setImageResource(R.drawable.shoe_empty)
+            } else {
+                val image = viewModel.shoeImages[it.imageIndex]
+                binding.productDetailImage.setImageResource(image)
+            }
+        }
+
+        binding.productDetailImage.setOnClickListener {
+            Timber.i("Changed image")
+            val idx = Random.nextInt(viewModel.shoeImages.count())
+            viewModel.currentProduct.value = viewModel.currentProduct.value?.also {
+                it.imageIndex = idx
+            }
         }
 
         return binding.root

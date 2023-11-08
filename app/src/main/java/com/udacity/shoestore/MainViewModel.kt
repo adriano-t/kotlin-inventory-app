@@ -14,15 +14,24 @@ class MainViewModel : ViewModel() {
             0,
             "",
             "",
-            "",
+            -1,
         )
     )
 
+    public val shoeImages = listOf(
+        R.drawable.shoe_0,
+        R.drawable.shoe_1,
+        R.drawable.shoe_2,
+        R.drawable.shoe_3,
+        R.drawable.shoe_4,
+        R.drawable.shoe_5
+    )
+
     private var _productsList = MutableLiveData<MutableList<Shoe>>(mutableListOf(
-        Shoe("Air Max", 40, "Nike", "Cool shoes", "image_1"),
-        Shoe("Super", 42, "Adidas", "Very very cool shoes", "image_2"),
-        Shoe("Air Max", 40, "Nike", "Cool shoes", "image_1"),
-        Shoe("Super", 42, "Adidas", "Very very cool shoes", "image_2"),
+        Shoe("Air Max", 40, "Nike", "Cool shoes", 0),
+        Shoe("Super", 42, "Adidas", "Very very cool shoes", 3),
+        Shoe("Air Max", 40, "Nike", "Cool shoes", 2),
+        Shoe("Super", 42, "Adidas", "Very very cool shoes", 1),
     ))
     val productsList: LiveData<MutableList<Shoe>>
         get() = _productsList
@@ -40,7 +49,8 @@ class MainViewModel : ViewModel() {
         if (shoe.size <= 0 ||
             shoe.company.isEmpty() ||
             shoe.name.isEmpty() ||
-            shoe.description.isEmpty()
+            shoe.description.isEmpty() ||
+            shoe.imageIndex == -1
         ) {
             return false;
         }
@@ -55,7 +65,7 @@ class MainViewModel : ViewModel() {
             0,
             "",
             "",
-            "",
+            -1,
         )
     }
 }

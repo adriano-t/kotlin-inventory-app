@@ -9,5 +9,5 @@ data class Shoe(
     var size: Int,
     var company: String,
     var description: String,
-    var image: String,
+    var imageIndex: Int,
 ) : Parcelable
